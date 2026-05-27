@@ -6,12 +6,6 @@
 <meta name="theme-color" content="#0b0f0d" />
 <title>Excel Maktabi — Bepul shablon</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<!-- Non-blocking font load: page renders immediately with system fonts, Geist loads after -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" /></noscript>
-
 <!-- Preload LCP image so browser fetches it immediately -->
 <link rel="preload" as="image" href="img/mockup_dashboard.webp" />
 
@@ -39,7 +33,7 @@
   html,body{margin:0;padding:0}
   html{background:var(--bg);}
   body{
-    font-family:'Geist','SF Pro Text',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',system-ui,sans-serif;
     color:var(--text);
     background:
       radial-gradient(120% 60% at 50% -10%, oklch(0.30 0.10 145 / .22), transparent 60%),
@@ -49,7 +43,6 @@
     min-height:100svh;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
-    font-feature-settings:"ss01","cv11";
     letter-spacing:-0.01em;
     overflow-x:hidden;
   }
@@ -96,7 +89,7 @@
     background: oklch(0.22 0.02 155 / .8);
     border:1px solid var(--line);
     color:var(--muted);
-    font-family:'Geist Mono',ui-monospace,monospace;
+    font-family:ui-monospace,'SF Mono',Consolas,monospace;
     font-size:10.5px;
     backdrop-filter: blur(8px);
   }
@@ -154,7 +147,7 @@
   }
   h1 .num{
     display:inline-block;
-    font-family:'Geist Mono',ui-monospace,monospace;
+    font-family:ui-monospace,'SF Mono',Consolas,monospace;
     font-weight:600;
     font-size:0.88em;
     padding:0 6px;
@@ -217,7 +210,7 @@
       0 0 12px oklch(0.78 0.17 145 / .35);
   }
   .b-tag{
-    font-family:'Geist Mono',ui-monospace,monospace;
+    font-family:ui-monospace,'SF Mono',Consolas,monospace;
     font-size:9.5px;
     color:var(--accent);
     letter-spacing:0.12em;
@@ -256,7 +249,7 @@
     font-weight:700;
     letter-spacing:0.14em;
     text-transform:uppercase;
-    font-family:'Geist Mono',ui-monospace,monospace;
+    font-family:ui-monospace,'SF Mono',Consolas,monospace;
     white-space:nowrap;
     box-shadow:
       0 6px 16px -6px oklch(0.78 0.17 145 / .55),
@@ -368,7 +361,7 @@
     justify-content:space-between;
     font-size:10.5px;
     color:var(--dim);
-    font-family:'Geist Mono',ui-monospace,monospace;
+    font-family:ui-monospace,'SF Mono',Consolas,monospace;
     letter-spacing:0.06em;
     text-transform:uppercase;
   }
