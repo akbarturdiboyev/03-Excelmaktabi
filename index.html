@@ -6,35 +6,14 @@
 <meta name="theme-color" content="#0b0f0d" />
 <title>Excel Maktabi — Bepul shablon</title>
 
-<script>
-  /* ====== Facebook Pixel ====== */
-  !function(f, b, e, v, n, t, s) {
-    if (f.fbq) return;
-    n = f.fbq = function() {
-      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-    };
-    if (!f._fbq) f._fbq = n;
-    n.push    = n;
-    n.loaded  = !0;
-    n.version = '2.0';
-    n.queue   = [];
-    t         = b.createElement(e);
-    t.async   = !0;
-    t.src     = v;
-    s         = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
-  }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-
-  fbq('init',  '1282837230481872');
-  fbq('track', 'PageView');
-</script>
-
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1282837230481872&ev=PageView&noscript=1"/></noscript>
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<!-- Non-blocking font load: page renders immediately with system fonts, Geist loads after -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" /></noscript>
+
+<!-- Preload LCP image so browser fetches it immediately -->
+<link rel="preload" as="image" href="img/mockup_dashboard.webp" />
 
 <style>
   :root{
@@ -444,7 +423,7 @@
         <img
           src="img/mockup_dashboard.webp"
           alt="Cash Flow shablon preview"
-          loading="lazy"
+          fetchpriority="high"
           decoding="async"
           class="preview-img"
         />
@@ -475,6 +454,30 @@
 
 </main>
 
+<script>
+  /* ====== Facebook Pixel ====== */
+  !function(f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function() {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push    = n;
+    n.loaded  = !0;
+    n.version = '2.0';
+    n.queue   = [];
+    t         = b.createElement(e);
+    t.async   = !0;
+    t.src     = v;
+    s         = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init',  '1282837230481872');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1282837230481872&ev=PageView&noscript=1"/></noscript>
 
 </body>
 </html>
